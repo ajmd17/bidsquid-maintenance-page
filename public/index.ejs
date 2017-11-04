@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Down for Maintenance | BidSquid
+    </title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/css/squidkit-lite.css" />
+    <style>
+      h2 {
+        font-weight: normal;
+        line-height: 150%;
+        margin: 0 0 25px 0;
+      }
+
+      article.sq-card {
+        padding: 25px;
+      }
+      article.sq-card p {
+        margin: 0;
+      }
+      article.sq-card p {
+        font-size: 20px;
+      }
+
+      .logo-wrapper {
+        float: left;
+        margin-top: 10px;
+        margin-right: 35px;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 768px) {
+        .logo-wrapper {
+          float: none;
+          margin: 0 0 25px 0;
+          text-align: center;
+        }
+      }
+
+      hr {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sq-view no-sidebar">
+      <div class="sq-page">
+        <h1>
+          Just a minute...
+        </h1>
+        <article class="sq-card">
+          <h2>
+            It looks like you tried to reach us at a bad time.<br/>
+            We're currently down for maintenance, and working hard to make the site even more awesome.
+          </h2>
+          <p>
+
+            It should be back online <%= (typeof estimation !== 'undefined' && estimation) ? `in ${estimation}` : 'soon enough' %> <small>... assuming everything goes according to plan!</small>
+          </p>
+          <% if (typeof message !== 'undefined' && message != null) { %>
+          <hr/>
+          <span style="float:right">
+            <a href="/" onclick="window.location.reload();return false;">Click here to retry</a>
+          </span>
+          <p>Maintenance message: <i><%= message %></i></p>
+          <% } %>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
